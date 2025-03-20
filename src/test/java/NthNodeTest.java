@@ -1,4 +1,4 @@
-import org.example.LinkedList.remove_nth_node.NthNode;
+import org.example.LinkedList.remove_nth.NthNode;
 import org.junit.Test;
 
 import java.util.ArrayList;

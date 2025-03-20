@@ -58,11 +58,11 @@ public class TwoSum {
         for (int i = 0; i < nums.length; i++) {
             for (int j = i + 1; j < nums.length; j++) {
                 if (nums[i] + nums[j] == target) {
-                    return Optional.of(new int[]{i, j}); // Return the result wrapped in Optional
+                    return Optional.of(new int[]{i, j});
                 }
             }
         }
-        return Optional.empty(); // Return an empty Optional if no solution
+        return Optional.empty();
     }
 
     public static List<int[]> allPairsUsingHashMap(int[] nums, int target) {

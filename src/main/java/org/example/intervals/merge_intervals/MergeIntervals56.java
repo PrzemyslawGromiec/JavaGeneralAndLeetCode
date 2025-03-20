@@ -38,4 +38,20 @@ public class MergeIntervals56 {
         merged.add(prev);
         return merged.toArray(new int[merged.size()][]);
     }
+
+    public int[][] merge2(int[][] intervals) {
+        Arrays.sort(intervals, (a, b) -> a[0] - b[0]);
+        ArrayList<int[]> results = new ArrayList<>();
+
+        for(int[] interval: intervals){
+            if(results.isEmpty()){
+                results.add(interval);
+            } else if(results.getLast()[1] < interval[0]) {
+                results.add(interval);
+            } else {
+                results.getLast()[1] = Math.max(results.getLast()[1], interval[1]);
+            }
+        }
+        return results.toArray(new int[results.size()][]);
+    }
 }
